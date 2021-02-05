@@ -1,15 +1,19 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
+import Header from './Header';
+import Nav from './Nav';
+import styles from './index.module.less';
 
-function Layout(props) {
+export default function Layout(props) {
   const { route } = props;
 
   return (
-    <div>
-      <div>layout</div>
-      {renderRoutes(route.routes)}
+    <div className={styles.layoutContainer}>
+      <Header />
+      <div className={styles.body}>
+        <Nav />
+        <main className={styles.main}> {renderRoutes(route.routes)}</main>
+      </div>
     </div>
   );
 }
-
-export default Layout;
