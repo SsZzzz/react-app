@@ -16,12 +16,10 @@ const stores = {
 };
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ConfigProvider locale={zhCN}>
-      <Provider {...stores}>
-        <Router />
-      </Provider>
-    </ConfigProvider>
-  </React.StrictMode>,
+  <ConfigProvider locale={zhCN}>
+    <Provider {...stores}>
+      <Router />
+    </Provider>
+  </ConfigProvider>,
   document.getElementById('root'),
 );
