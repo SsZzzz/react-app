@@ -9,6 +9,7 @@ function App(props) {
   return (
     <div className="App">
       <span>{name}</span>
+      <span></span>
     </div>
   );
 }
